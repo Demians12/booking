@@ -9,6 +9,7 @@ import (
 	"github.com/alexedwards/scs/v2"
 	"github.com/demians12/pkg/config"
 	"github.com/demians12/pkg/handlers"
+	_ "github.com/demians12/pkg/models"
 	"github.com/demians12/pkg/render"
 )
 
@@ -36,7 +37,8 @@ func main() {
 
 	tc, err := render.CreateTemplateCache(nil)
 	if err != nil {
-		log.Fatal("template cache is not created")
+		log.Fatal("cannot create template cache")
+		return
 	}
 
 	app.TemplateCache = tc

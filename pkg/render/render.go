@@ -52,6 +52,7 @@ func RenderTemplate(w http.ResponseWriter, html string, td *models.TemplateData)
 	if err != nil {
 		log.Fatal("Error writing template to browser", err)
 	}
+
 }
 
 //createtemplatecache creates a template cache as a map
